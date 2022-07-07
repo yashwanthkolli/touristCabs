@@ -16,7 +16,6 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
     >
         <DialogTitle>{selectedCar.name}</DialogTitle>
         <DialogContent>
-            
         </DialogContent>
         <DialogActions>
             <Button onClick={handleClose}>Close</Button>
