@@ -1,0 +1,47 @@
+.homepage{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#111111, 0.7) 10%,
+        rgba(#252525, 0.5)
+        ),
+        url("../../assets/images/homepage-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-primary{
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 7px;
+    color: rgba($color: #F0EBE3, $alpha: 0.6);
+}
+
+.heading-secondary{
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgba($color: #F0EBE3, $alpha: 0.7);
+}
+
+.heading-cursor{
+    font-size: 110px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgba($color: #F0EBE3, $alpha: 0.55);
+}
+
+.btn-container{
+    position: absolute;
+    bottom: 10vh;
+}

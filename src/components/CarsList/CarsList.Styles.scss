@@ -1,0 +1,19 @@
+.car-list-section{
+    background: #E4DCCF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+
+    .cards-container{
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .card{
+            margin-bottom: 20px;
+        }
+    }
+}

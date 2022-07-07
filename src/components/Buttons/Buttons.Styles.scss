@@ -1,0 +1,21 @@
+.btn{
+    outline: none;
+}
+
+.btn-primary{
+    width: 200px;
+    height: 60px;
+    background: rgba(#576F72, 0.8);
+    border: 2px solid #576F72;
+    color: #F0EBE3;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+
+    &:hover{
+        background: rgba(#576F72, 0.3);
+    }
+}

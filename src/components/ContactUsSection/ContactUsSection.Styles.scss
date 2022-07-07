@@ -1,0 +1,167 @@
+.contact-us-section{
+    background: #576F72;
+    padding-top: 70px;
+    color: #E4DCCF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contacts{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        border: 2px solid #E4DCCF;
+        padding: 20px 40px;
+
+        .contact{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .contact-icon{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                margin-right: 20px;
+                align-items: center;
+                background: #E4DCCF;
+                color: #576F72;
+                font-size: 36px;
+                transition: all 0.2s;
+
+                &:hover{
+                    cursor: pointer;
+                    color: #7D9D9C;
+                    font-size: 40px;
+                }
+            }
+
+            .contact-detail{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .details{
+        width: 80%;
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .company-text{
+            width: 35%;
+            letter-spacing: 1px;
+            font-size: 18px;
+
+            .logo{
+                height: 40px;
+                margin-bottom: 20px;
+                -webkit-tap-highlight-color: transparent;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .subscribe{
+            width: 35%;
+
+            .subscribe-heading{
+                font-size: 24px;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+
+            .subscribe-text{
+                letter-spacing: 1px;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .subscribe-input{
+                background: #E4DCCF;
+                padding: 2px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                input{
+                    background: #E4DCCF;
+                    width:  calc(70% - 4px);
+                    border: none;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    outline: none;
+                    color: #576F72;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+                button{
+                    background: #576F72;
+                    color: #E4DCCF;
+                    height: 100%;
+                    padding: 10px 20px;
+                    border: none;
+                    font-size: 18px;
+                    outline: none;
+                    font-family: 'Josefin Sans', sans-serif;
+                    letter-spacing: 1px;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        width: 80%;
+        margin-top: 70px;
+        padding: 20px;
+        border-top: 1px solid #E4DCCF;
+        text-align: right;
+
+        span{
+            overflow: hidden;
+            position: relative;
+        }
+
+        a{
+            text-decoration: none;
+            color: #F0EBE3;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                transform: translate3d(0, -70%, 0);
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0.1em;
+                width: 100%;
+                background: #fff;
+                opacity: 0;
+                transition: opacity 300ms, transform 300ms;
+            }
+
+            &:hover{
+                color: #fff;
+                &::after{
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
