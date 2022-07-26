@@ -1,12 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
+import { toast } from 'react-toastify';
 import Button from '@mui/material/Button';
 import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import './DialogueBox.Styles.scss'
+import axios from 'axios';
 
 const DialogueBox = ({open, handleClose, selectedCar}) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [fromDate, setFromDate] = useState(null)
+  const [toDate, setToDate] = useState(null)
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    const id = toast.loading("Please wait...")
+    axios.post(`${process.env.REACT_APP_API}/request/register`, { name, email, phone, car: selectedCar.name, from_date: fromDate, to_date: toDate })
+    .then(async (res) => {
+      toast.update(id, { 
+        render: "Request Sent. We'll contact you in within 5 minutes.", 
+        type: "success", 
+        isLoading: false,
+        icon: true,
+        autoClose: true
+      });
+      handleClose()
+    })
+    .catch((err) => {
+      toast.update(id, { 
+        render: "Error! Please try later", 
+        type: "error", 
+        isLoading: false, 
+        icon: true, 
+        autoClose: true
+      });
+    })
+  }
+
   return (
     <Dialog
         maxWidth='lg'
@@ -16,7 +53,75 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
     >
         <DialogTitle>{selectedCar.name}</DialogTitle>
         <DialogContent>
+          <div className='dialogue-content'>
+            <div className='form-container'>
+              <form className='rent-form'>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <div className='input-container-full'>
+                    <TextField 
+                      type='text' 
+                      color='grey'
+                      required 
+                      label="Name" 
+                      id='name-input'
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      fullWidth={true} />
+                  </div>
+                  <div className='input-container-full'>
+                    <TextField 
+                      type='email' 
+                      color='grey'
+                      required 
+                      label="Email" 
+                      id='email-input'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      fullWidth={true} />
+                  </div>
+                  <div className='input-container-full'>
+                    <TextField 
+                      type='text' 
+                      color='grey'
+                      required 
+                      label="Phone Number" 
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      fullWidth={true} 
+                      id='phone-input'
+                    />
+                  </div>
+                  <div className='dates-container'>
+                    <div className='input-container'>
+                      <MobileDatePicker
+                        label="From Date"
+                        value={fromDate}
+                        onChange={(newValue) => setFromDate(newValue)}
+                        inputFormat='dd/MM/yyyy'
+                        renderInput={(params) => <TextField color='grey' id='from-date-input' required {...params} />}
+                      />
+                    </div>
+                    <div className='input-container'>
+                      <MobileDatePicker
+                        required
+                        label="To Date"
+                        value={toDate}
+                        onChange={(newValue) => setToDate(newValue)}
+                        inputFormat='dd/MM/yyyy'
+                        renderInput={(params) => <TextField color='grey' id='to-date-input' required {...params} />}
+                      />
+                    </div>
+                  </div>
+                  <button onClick={handleClick} className='btn btn-primary'>Request a Quote</button>
+                </LocalizationProvider>
+              </form>
+            </div>
+            <div className='img-container'>
+              <img src={selectedCar.image1} alt='carImage' />
+            </div>
+          </div>
         </DialogContent>
+
         <DialogActions>
             <Button onClick={handleClose}>Close</Button>
         </DialogActions>

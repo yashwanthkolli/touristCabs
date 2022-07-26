@@ -31,9 +31,46 @@
     }
 
     .btn-primary{
+        background: #576F72;
+
         &:hover{
             background: #E4DCCF;
             color: #576F72;
+        }
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .cars-section{
+        padding: 7vh 0;
+
+        .text{
+            width: 85%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards-container{
+            width: 80%;
+            align-items: center;
+            flex-direction: column;
+            margin: 30px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .cars-section{
+        .heading-secondary{
+            font-size: 30px;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .text{
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: normal;
         }
     }
 }

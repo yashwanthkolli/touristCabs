@@ -1,7 +1,6 @@
 .homepage{
     width: 100%;
     height: 100vh;
-    min-height: 100vh;
     background-image: linear-gradient(
         to right bottom,
         rgba(#111111, 0.7) 10%,
@@ -16,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .heading-primary{
@@ -44,4 +44,33 @@
 .btn-container{
     position: absolute;
     bottom: 10vh;
+}
+
+@media only screen and (max-width: 950px){
+    .heading-primary{
+        font-size: 80px;
+    }
+
+    .heading-cursor{
+        font-size: 90px;
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .heading-primary{
+        font-size: 50px;
+        letter-spacing: 4px;
+    }
+
+    .heading-cursor{
+        font-size: 60px;
+    }
+
+    .heading-secondary{
+        font-size: 18px;
+    }
+
+    .btn-container{
+        bottom: 20vh;
+    }
 }

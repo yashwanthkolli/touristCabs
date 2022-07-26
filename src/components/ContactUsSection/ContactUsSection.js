@@ -75,7 +75,7 @@ const ContactUsSection = () => {
           </div>
           <div className='text'>
             Why stay at home when you can travel the world? You can reserve the car as long as you wish.
-            Your freedom at you fingertips.
+            Travel hassle free.
           </div>
         </div>
         <div className='subscribe'>
@@ -94,7 +94,7 @@ const ContactUsSection = () => {
         </div>
       </div>
       <div className='footer'>
-        Made to Perfection by <span><Link to='/'>Yashwanth Kolli</Link></span>
+        Made to Perfection by <span><a target='_blank' rel="noreferrer" href='https://www.instagram.com/200iq_0skill/'>Yashwanth Kolli</a></span>
       </div>
     </section>
   )

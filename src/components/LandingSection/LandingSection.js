@@ -20,7 +20,7 @@ const LandingSection = () => {
             delay: 200
         }}
       />
-      <Link data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" to='/' className='btn-container'>
+      <Link data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" to='/#cars-section' className='btn-container'>
         <PrimaryButton label='Rent Now' />
       </Link>
     </section>

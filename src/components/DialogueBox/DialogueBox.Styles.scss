@@ -1,0 +1,65 @@
+.dialogue-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-container{
+        width: 50%;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .form-container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .rent-form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .input-container-full, .dates-container{
+                width: 100%;
+                margin-bottom: 30px;
+
+                #name-input, #email-input, #phone-input, #name-input{
+                    color: #576F72;
+                    font-family: 'Josefin Sans', sans-serif;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .dates-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .input-container{
+                    width: 45%;
+                    
+                    #from-date-input, #to-date-input{
+                        color: #576F72;
+                        font-family: 'Josefin Sans', sans-serif;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .btn-primary{
+                &:hover{
+                    background: #fff;
+                    color: #576F72;
+                }
+            }
+        }
+    }
+}

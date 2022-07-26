@@ -1,4 +1,12 @@
 import swift from '../../assets/swift.png'
+import innova from '../../assets/innova.png'
+import innova1 from '../../assets/innova1.jpg'
+import eritiga from '../../assets/eritiga.png'
+import ertiga1 from '../../assets/ertiga1.jpg'
+import traveller from '../../assets/traveller.png'
+import traveller1 from '../../assets/traveller1.jpg'
+import etios from '../../assets/etios.png'
+import etios1 from '../../assets/etios1.jpg'
 
 const Cars = [
     {
@@ -9,57 +17,52 @@ const Cars = [
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
-        image: swift
+        image: swift,
+        image1: swift
     },
     {
         _id: 2,
-        name: "Shift",
+        name: "Innova Crysta",
         fuel: "Desiel",
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
-        image: swift
+        image: innova,
+        image1: innova1
     },
     {
         _id: 3,
-        name: "Shift",
+        name: "Eritiga ZDI",
         fuel: "Desiel",
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
-        image: swift
+        image: eritiga,
+        image1: ertiga1
     },
     {
         _id: 4,
-        name: "Shift",
+        name: "Force Traveller",
         fuel: "Desiel",
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
-        image: swift
+        image: traveller,
+        image1: traveller1
     },
     {
         _id: 5,
-        name: "Shift",
+        name: "Toyota Etios",
         fuel: "Desiel",
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
-        image: swift
-    },
-    {
-        _id: 6,
-        name: "Shift",
-        fuel: "Desiel",
-        noOfSeats: 4,
-        transition: "Auto",
-        type: "AC",
-        pricePerDay: 1000, 
-        image: swift
+        image: etios,
+        image1: etios1
     }
 ]
 
