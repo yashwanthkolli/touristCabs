@@ -39,7 +39,7 @@ const ContactUsSection = () => {
 
   return (
     <section className='contact-us-section'>
-      <div className='contacts'>
+      <div className='contacts' data-aos="fade-up">
           <div className='contact'>
             <Link to='/' className='contact-icon'>
               <FiPhoneCall />
@@ -69,7 +69,7 @@ const ContactUsSection = () => {
           </div>
       </div>
       <div className='details'>
-        <div className='company-text'>
+        <div className='company-text' data-aos="fade-up">
           <div className='logo'>
             <img src={logo} alt='logo' />
           </div>
@@ -78,7 +78,7 @@ const ContactUsSection = () => {
             Travel hassle free.
           </div>
         </div>
-        <div className='subscribe'>
+        <div className='subscribe' data-aos="fade-up">
           <h2 className='subscribe-heading'>Subscribe</h2>
           <p className='subscribe-text'>Sign up to get regular updates about our travels and tours</p>
           <form onSubmit={onSubmit} className='subscribe-input'>
@@ -94,7 +94,7 @@ const ContactUsSection = () => {
         </div>
       </div>
       <div className='footer'>
-        Made to Perfection by <span><a target='_blank' rel="noreferrer" href='https://www.instagram.com/200iq_0skill/'>Yashwanth Kolli</a></span>
+        Made to Perfection by <span><a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/yashwanth-kolli-b8b413208/'>Yashwanth Kolli</a></span>
       </div>
     </section>
   )

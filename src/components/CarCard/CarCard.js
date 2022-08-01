@@ -19,7 +19,7 @@ const CarCard = ({car}) => {
   }
 
   return(
-    <div className='card'>
+    <div data-aos="fade-up" className='card'>
       <div className='card-title'>{car.name}</div>
       <div className='image-container'>
         <img src={car.image} alt='CarImage' />

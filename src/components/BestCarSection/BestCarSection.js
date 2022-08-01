@@ -51,10 +51,10 @@ const BestCarSection = () => {
             </div>
           </div>
         </div>
+        <button onClick={handleClick} className='btn btn-primary'>Rent {car.name}</button>
         <div className='image-container'>
             <img src={car.image} alt='CarImage' />
         </div>
-        <button onClick={handleClick} className='btn btn-primary'>Rent {car.name}</button>
       </div>
         
       <DialogueBox open={openDialogue} handleClose={onClose} selectedCar={car} />

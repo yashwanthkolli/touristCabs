@@ -55,9 +55,60 @@
             }
 
             .btn-primary{
+                background: #576F72;
+
                 &:hover{
                     background: #fff;
                     color: #576F72;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .dialogue-content{
+        flex-direction: column-reverse;
+
+        .img-container{
+            width: 75%;
+            margin-bottom: 50px;
+        }
+
+        .form-container{
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .dialogue-content{
+
+        .img-container{
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .form-container{
+            width: 100%;
+
+            .rent-form{
+                width: 90%;
+
+                .input-container-full, .dates-container{
+                    margin-bottom: 15px;
+
+                    #name-input, #email-input, #phone-input, #name-input{
+                        font-size: 16px;
+                    }
+                }
+
+                .dates-container{
+                    .input-container{
+                        #from-date-input, #to-date-input{
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
