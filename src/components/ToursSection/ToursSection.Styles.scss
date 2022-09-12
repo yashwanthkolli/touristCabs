@@ -1,0 +1,71 @@
+.tours-section{
+    background: #F0EBE3;
+    padding: 10vh 10%;
+    color: #576F72;
+
+    .heading-secondary{
+        margin-bottom: 30px;
+        color: #576F72;
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .other-tours{
+            width: 40%;
+            font-size: 20px;
+            line-height: 24px;
+
+            .text{
+                margin-bottom: 30px;
+            }
+
+            .places-list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 70px;
+
+                .place{
+                    margin-right: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 20px;
+                    cursor: pointer;
+
+                    .icon{
+                        font-size: 20px !important;
+                        margin-right: 10px;
+                    }
+                }
+
+                &::after{
+                    content: '';
+                    flex: auto;
+                }
+            }
+
+            .btn-primary{
+                background: #576F72;
+        
+                &:hover{
+                    background: #F0EBE3;
+                    color: #576F72;
+                }
+            }
+        }
+
+        .popular-tours{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import CarsSection from '../CarsSection/CarsSection';
 import ContactUsSection from '../ContactUsSection/ContactUsSection';
 import LandingSection from '../LandingSection/LandingSection';
 import NavBar from '../Navbar/NavBar';
+import ToursSection from '../ToursSection/ToursSection';
 import './HomePage.Styles.scss'
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <LandingSection />
       <AboutUsSection />
       <CarsSection />
+      <ToursSection />
       <ContactUsSection />
     </div>
   )

@@ -11,37 +11,45 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import './DialogueBox.Styles.scss'
 import axios from 'axios';
+import validator from 'validator';
 
 const DialogueBox = ({open, handleClose, selectedCar}) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [fromDate, setFromDate] = useState(null)
+  const [fromDate, setFromDate] = useState(new Date())
   const [toDate, setToDate] = useState(null)
 
   const handleClick = (e) => {
     e.preventDefault()
-    const id = toast.loading("Please wait...")
-    axios.post(`${process.env.REACT_APP_API}/request/register`, { name, email, phone, car: selectedCar.name, from_date: fromDate, to_date: toDate })
-    .then(async (res) => {
-      toast.update(id, { 
-        render: "Request Sent. We'll contact you in within 5 minutes.", 
-        type: "success", 
-        isLoading: false,
-        icon: true,
-        autoClose: true
-      });
-      handleClose()
-    })
-    .catch((err) => {
-      toast.update(id, { 
-        render: "Error! Please try later", 
-        type: "error", 
-        isLoading: false, 
-        icon: true, 
-        autoClose: true
-      });
-    })
+    if(!validator.isAlpha(name.split(' ').join(''))) return toast.error('Enter valid Name')
+    if(!validator.isEmail(email)) return toast.error('Enter valid Email')
+    if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
+    if(name && email && phone && fromDate && toDate){
+      const id = toast.loading("Please wait...")
+      axios.post(`${process.env.REACT_APP_API}/request/register`, { name, email, phone, car: selectedCar.name, from_date: fromDate, to_date: toDate })
+      .then(async (res) => {
+        toast.update(id, { 
+          render: "Request Sent. We'll contact you soon.", 
+          type: "success", 
+          isLoading: false,
+          icon: true,
+          autoClose: true
+        });
+        handleClose()
+      })
+      .catch((err) => {
+        toast.update(id, { 
+          render: "Error! Please try later", 
+          type: "error", 
+          isLoading: false, 
+          icon: true, 
+          autoClose: true
+        });
+      })
+    } else {
+      toast.error('Enter valid details')
+    }
   }
 
   return (
@@ -96,6 +104,7 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
                       <MobileDatePicker
                         label="From Date"
                         value={fromDate}
+                        minDate={new Date()}
                         onChange={(newValue) => setFromDate(newValue)}
                         inputFormat='dd/MM/yyyy'
                         renderInput={(params) => <TextField color='grey' id='from-date-input' required {...params} />}
@@ -106,6 +115,7 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
                         required
                         label="To Date"
                         value={toDate}
+                        minDate={fromDate}
                         onChange={(newValue) => setToDate(newValue)}
                         inputFormat='dd/MM/yyyy'
                         renderInput={(params) => <TextField color='grey' id='to-date-input' required {...params} />}

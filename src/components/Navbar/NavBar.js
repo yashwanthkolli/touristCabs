@@ -45,9 +45,9 @@ const NavBar = () => {
   return (
     <nav data-aos-duration="1000" data-aos-delay="500" data-aos='fade-down' className={offset || location.pathname!=='/' ? 'navbar-white' : 'navbar'}>
       <div className='nav-container'>
-        <div className='logo-container'>
+        <Link to='/' className='logo-container'>
           <img src={offset || location.pathname!=='/' ? logo2 : logo} alt='Logo' />
-        </div>
+        </Link>
         <div className='nav-links'>
           <Link className='nav-option' to='/'>Home</Link>
           <Link className='nav-option' to='/#about-us-section'>About Us</Link>

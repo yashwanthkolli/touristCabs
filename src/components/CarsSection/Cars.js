@@ -11,12 +11,12 @@ import etios1 from '../../assets/etios1.jpg'
 const Cars = [
     {
         _id: 1,
-        name: "Shift",
+        name: "Dzire",
         fuel: "Desiel",
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
-        pricePerDay: 1000, 
+        pricePerDay: 2300, 
         image: swift,
         image1: swift
     },
@@ -24,10 +24,10 @@ const Cars = [
         _id: 2,
         name: "Innova Crysta",
         fuel: "Desiel",
-        noOfSeats: 4,
+        noOfSeats: 6,
         transition: "Auto",
         type: "AC",
-        pricePerDay: 1000, 
+        pricePerDay: 3300, 
         image: innova,
         image1: innova1
     },
@@ -35,7 +35,7 @@ const Cars = [
         _id: 3,
         name: "Eritiga ZDI",
         fuel: "Desiel",
-        noOfSeats: 4,
+        noOfSeats: 6,
         transition: "Auto",
         type: "AC",
         pricePerDay: 1000, 
@@ -46,10 +46,10 @@ const Cars = [
         _id: 4,
         name: "Force Traveller",
         fuel: "Desiel",
-        noOfSeats: 4,
+        noOfSeats: 11,
         transition: "Auto",
         type: "AC",
-        pricePerDay: 1000, 
+        pricePerDay: 4300, 
         image: traveller,
         image1: traveller1
     },
@@ -60,7 +60,7 @@ const Cars = [
         noOfSeats: 4,
         transition: "Auto",
         type: "AC",
-        pricePerDay: 1000, 
+        pricePerDay: 2300, 
         image: etios,
         image1: etios1
     }
