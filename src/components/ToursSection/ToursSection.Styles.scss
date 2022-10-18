@@ -69,3 +69,62 @@
         }
     }
 }
+
+@media only screen and (max-width: 1050px){
+    .tours-section{
+        .content{
+            flex-direction: column-reverse;
+
+            .popular-tours{
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+            .other-tours{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .tours-section{
+        .content{
+            .popular-tours{
+                width: 90%;
+                margin-bottom: 30px;
+            }
+
+            .other-tours{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .tours-section{
+        .content{
+            .popular-tours{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .tours-section{
+        .content{
+            .popular-tours{
+                width: 95%;
+            }
+            .other-tours{
+                width: 95%;
+                
+                .places-list{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

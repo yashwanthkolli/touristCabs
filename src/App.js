@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
 import CarsPage from './components/CarsPage/CarsPage';
+import ToursPage from './components/ToursPage/ToursPage';
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route exact  path="/" element={<HomePage />} />
         <Route exact path="/cars" element={<CarsPage />} />
+        <Route exact path="/tours/:tourName" element={<ToursPage />} />
       </Routes>
     </div>
   );

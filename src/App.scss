@@ -6,3 +6,11 @@ $Light: #F0EBE3;
 
 $Font: 'Josefin Sans', sans-serif;
 
+*{
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+

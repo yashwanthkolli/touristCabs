@@ -5,6 +5,7 @@
     overflow: hidden;
     transition: 0.2s;
     cursor: pointer;
+    user-select: none;
 
     .bg-image{
         position: absolute;
@@ -84,7 +85,7 @@
         transform: rotate(-90deg);
     }
 
-    &:hover{
+    &:hover, &:active{
         .bg-image{
             transform: scale(1);
 
@@ -104,5 +105,18 @@
         .visiting-places{
             opacity: 1;
         }
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .tour-card{
+        width: 70%;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .tour-card{
+        width: 90%;
     }
 }

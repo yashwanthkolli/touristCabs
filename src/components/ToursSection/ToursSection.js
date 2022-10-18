@@ -31,6 +31,9 @@ const ToursSection = () => {
                     <p className='text'>
                         We provide you with interesting and exciting tours to different parts of the Southern India. 
                         Contact us for visiting any other South Indian place.
+                        <br />
+                        <br />
+                        Click on a place to see more details.
                     </p>
                     <div className='places-list'>
                         <span className='place' onClick={handleOtherPlaces}><FiMapPin className='icon' />Ooty/Coonore</span>
@@ -38,6 +41,7 @@ const ToursSection = () => {
                         <span className='place' onClick={handleOtherPlaces}><FiMapPin className='icon' />Coorg</span>
                         <span className='place' onClick={handleOtherPlaces}><FiMapPin className='icon' />Munnar</span>
                         <span className='place' onClick={handleOtherPlaces}><FiMapPin className='icon' />Mysore</span>
+                        <span className='place' onClick={handleOtherPlaces}><FiMapPin className='icon' />Banglore</span>
                     </div>
                     <Link to='/#contact-us-section'><button data-aos="fade-up" className='btn btn-primary'>Contact Us</button></Link>
                 </div>

@@ -8,6 +8,9 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import TextField from '@mui/material/TextField';
+import validator from 'validator';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 import './TourDialogueBox.Styles.scss'
 
 const TourDialogueBox = ({open, handleClose, selectedTour}) => {
@@ -15,6 +18,39 @@ const TourDialogueBox = ({open, handleClose, selectedTour}) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [fromDate, setFromDate] = useState(new Date())
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        if(!validator.isAlpha(name.split(' ').join(''))) return toast.error('Enter valid Name')
+        if(!validator.isEmail(email)) return toast.error('Enter valid Email')
+        if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
+        if(name && email && phone && fromDate){
+          const id = toast.loading("Please wait...")
+          axios.post(`${process.env.REACT_APP_API}/tours/register`, { name, email, phone, from_date: fromDate, place: selectedTour })
+          .then(async (res) => {
+            console.log(res)
+            toast.update(id, { 
+              render: "Request Sent. We'll contact you soon.", 
+              type: "success", 
+              isLoading: false,
+              icon: true,
+              autoClose: true
+            });
+            handleClose()
+          })
+          .catch((err) => {
+            toast.update(id, { 
+              render: "Error! Please try later", 
+              type: "error", 
+              isLoading: false, 
+              icon: true, 
+              autoClose: true
+            });
+          })
+        } else {
+          toast.error('Enter valid details')
+        }
+      }
 
     return (
         <Dialog
@@ -74,7 +110,7 @@ const TourDialogueBox = ({open, handleClose, selectedTour}) => {
                                     />
                                 </div>
                             </LocalizationProvider>
-                            <button className='btn btn-primary'>Book Now</button>
+                            <button onClick={handleClick} className='btn btn-primary'>Book Now</button>
                         </form>
                     </div>
                 </div>
