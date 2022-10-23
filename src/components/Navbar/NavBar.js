@@ -64,6 +64,7 @@ const NavBar = () => {
           <Link className='nav-option' to='/'>Home</Link>
           <Link className='nav-option' to='/#about-us-section'>About Us</Link>
           <Link className='nav-option' to='/cars'>Cars</Link>
+          <Link className='nav-option' to='/#tours-section'>Tours</Link>
           <Link className='nav-option' to={location.pathname === '/' ? '/#contact-us-section' : '/cars/#contact-us-section'}>Contact Us</Link>
         </div>
       </div>

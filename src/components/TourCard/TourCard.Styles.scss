@@ -84,8 +84,36 @@
         padding: 5px 10px;
         transform: rotate(-90deg);
     }
+}
 
-    &:hover, &:active{
+@media(hover: hover){
+    .tour-card{
+        &:hover, &:active, &:focus{
+            .bg-image{
+                transform: scale(1);
+    
+                img{
+                    filter: brightness(50%);
+                }
+            }
+    
+            .underline{
+                width: calc(100% - 40px);
+            }
+    
+            .details{
+                transform: translateY(0);
+            }
+    
+            .visiting-places{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media(hover:none){
+    .tour-card{
         .bg-image{
             transform: scale(1);
 

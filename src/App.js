@@ -11,6 +11,7 @@ import ToursPage from './components/ToursPage/ToursPage';
 function App() {
   useEffect(() => {
     AOS.init();
+    document.addEventListener("touchstart", function() {}, true)
   }, []);
 
   return (

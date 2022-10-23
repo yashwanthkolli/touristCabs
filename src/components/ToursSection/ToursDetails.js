@@ -6,9 +6,9 @@ const tours = [
         id: 1,
         place: 'Mysore',
         people: 4,
-        duration: 3,
+        duration: 1,
         cost: 5000,
-        car: 'Dzire',
+        car: 'Etios',
         img: mysore,
         visitingPlaces: ['Sri Rangapatna Temple', 'Sri Rangapatna Gumbaz', 'River Sangam', 'Mysore Zoo', 'Mysore Palace', 'Sand Museum', 'Brindhavan Gardens', 'Chamundeshwari Temple']
     },
@@ -16,9 +16,9 @@ const tours = [
         id: 2,
         place: 'Banglore',
         people: 4,
-        duration: 3,
+        duration: 1,
         cost: 5000,
-        car: 'Dzire',
+        car: 'Etios',
         img: banglore,
         visitingPlaces: ['Banglore Palace', 'Lalbagh Garden', 'Cubbon Park', 'Visvesvaraya Museum', 'Iskon Temple', 'Jawaharlal Nehru Planetorium', 'Vidhan Soudha', 'Tippu Sulthan Summer Palace']
     }

@@ -9,7 +9,7 @@ const TourCard = ({tour, onClick, setPlace}) => {
     }
 
     return (
-        <div className='tour-card' onClick={handleClick}>
+        <div className='tour-card' onClick={handleClick} role='button' tabIndex='0' aria-haspopup='true'>
             <div className='bg-image'>
                 <img src={tour.img} alt={tour.place} />
             </div>
@@ -17,7 +17,7 @@ const TourCard = ({tour, onClick, setPlace}) => {
                 <h1 className='name'>{tour.place}</h1>
                 <div className='underline'></div>
                 <div className='other-details'>
-                    <span className='detail'><BiTime className='icon' />{tour.duration} days</span>
+                    <span className='detail'><BiTime className='icon' />{tour.duration} day</span>
                     <span className='detail'><BiUser className='icon' />{tour.people}</span>
                     <span className='detail'><BiCar className='icon' />{tour.car}</span>
                 </div>

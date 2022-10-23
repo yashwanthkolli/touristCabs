@@ -11,10 +11,9 @@
 
     .content{
         width: 80%;
-        padding-top: 70px;
+        padding-top: 30px;
         display: flex;
         justify-content: space-between;
-        position: relative;
     }
 
     .image-container{
@@ -30,7 +29,7 @@
 
     .car-info{
         width: 30%;
-        margin-top: 10%;
+        margin-top: 7%;
 
         .title{
             font-size: 80px;
@@ -83,6 +82,7 @@
     }
 }
 
+
 @media only screen and (max-width: 1150px){
     .best-car-section{
         .content{
@@ -104,7 +104,7 @@
                 }
             }
             .btn-primary{
-                bottom: 12vh;
+                bottom: 13vh;
             }
         }
     }
@@ -114,7 +114,7 @@
     .best-car-section{
         .content{
             .btn-primary{
-                bottom: 8vh;
+                bottom: 10vh;
             }
         }
     }
@@ -124,7 +124,7 @@
     .best-car-section{
         .content{
             .btn-primary{
-                bottom: 3vh;
+                bottom: 7vh;
             }
         }
     }
@@ -144,7 +144,7 @@
                 }
             }
             .btn-primary{
-                bottom: -15vh;
+                bottom: 5vh;
             }
         }
     }
