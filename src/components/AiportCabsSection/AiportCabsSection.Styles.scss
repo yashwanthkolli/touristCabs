@@ -1,0 +1,82 @@
+.airport-section{
+    padding: 10vh 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#111111, 0.94) 10%,
+        rgba(#576F72, 0.8)
+        ),
+        url("../../assets/images/airport-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    color: #F0EBE3;
+
+    .heading-secondary{
+        margin-bottom: 30px;
+        width: 80%;
+        margin: auto;
+        font-size: 45px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .content{
+        width: 80%;
+        margin: 80px auto 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .part{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .text{
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 1px;
+            }
+
+            .icon{
+                font-size: 100px;
+                font-weight: 100;
+                color: #F0EBE3;
+                text-align: center;
+                margin: 20px auto;
+            }
+
+            .btn-primary{
+                background: #F0EBE3;
+                border: 2px solid #F0EBE3;
+                color: #576F72;
+                width: 80%;
+                margin: auto;
+
+                &:hover{
+                    background: transparent;
+                    color: #F0EBE3;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 650px){
+    .airport-section{
+        .content{
+            flex-wrap: wrap;
+
+            .part{
+                width: 80%;
+            }
+
+            .location-booking{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

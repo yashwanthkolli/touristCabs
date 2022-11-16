@@ -1,0 +1,110 @@
+.tour-dialogue-content{
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-container{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .rent-form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .input-container-full, .dates-container{
+                width: 100%;
+                margin-bottom: 30px;
+
+                #name-input, #email-input, #phone-input, #name-input{
+                    color: #576F72;
+                    font-family: 'Josefin Sans', sans-serif;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .dates-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .input-container{
+                    width: 45%;
+                    
+                    #from-date-input, #to-date-input{
+                        color: #576F72;
+                        font-family: 'Josefin Sans', sans-serif;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .btn-primary{
+                background: #576F72;
+                margin-top: 50px;
+
+                &:hover{
+                    background: #fff;
+                    color: #576F72;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .dialogue-content{
+        flex-direction: column-reverse;
+
+        .img-container{
+            width: 75%;
+            margin-bottom: 50px;
+        }
+
+        .form-container{
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .dialogue-content{
+
+        .img-container{
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .form-container{
+            width: 100%;
+
+            .rent-form{
+                width: 90%;
+
+                .input-container-full, .dates-container{
+                    margin-bottom: 15px;
+
+                    #name-input, #email-input, #phone-input, #name-input{
+                        font-size: 16px;
+                    }
+                }
+
+                .dates-container{
+                    .input-container{
+                        #from-date-input, #to-date-input{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

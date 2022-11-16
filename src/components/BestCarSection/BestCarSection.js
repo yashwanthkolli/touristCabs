@@ -37,18 +37,7 @@ const BestCarSection = () => {
               </div>
               <div className='text'>{car.type}</div>
             </div>
-            <div className='detail'>
-              <div className='icon'>
-                <GiGears />
-              </div>
-              <div className='text'>{car.transition}</div>
-            </div>
-            <div className='detail'>
-              <div className='icon'>
-                <GiGasPump />
-              </div>
-              <div className='text'>{car.fuel}</div>
-            </div>
+            
           </div>
         </div>
         <button onClick={handleClick} className='btn btn-primary'>Rent {car.name}</button>
