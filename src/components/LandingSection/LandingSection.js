@@ -6,7 +6,7 @@ import './LandingSection.Styles.scss'
 const LandingSection = () => {
   return (
     <section className='homepage'>
-      <h1 data-aos="fade-up" className='heading-secondary'>With the best travel agency</h1>
+      <h1 data-aos="fade-up" className='heading-secondary'>With RT Tours and Travels</h1>
       <Typewriter
         data-aos="fade-up"
         data-aos-delay="500" 
