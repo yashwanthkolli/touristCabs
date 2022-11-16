@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6e400e75.css",
+    "main.js": "/static/js/main.54892a38.js",
+    "static/js/27.a4074168.chunk.js": "/static/js/27.a4074168.chunk.js",
+    "static/media/mobile-background.jpg": "/static/media/mobile-background.c914bc4b032fbfb4b299.jpg",
+    "static/media/mysore.jpg": "/static/media/mysore.01c562cdb69d3a44c333.jpg",
+    "static/media/banglore.jpg": "/static/media/banglore.b830c12097f01329a793.jpg",
+    "static/media/homepage-background.jpg": "/static/media/homepage-background.33db9940c0ab1b00ae4e.jpg",
+    "static/media/airport-background.jpg": "/static/media/airport-background.479b1eb20f1ebf165edc.jpg",
+    "static/media/etios1.jpg": "/static/media/etios1.6ead0fddd7b15bf6aeb4.jpg",
+    "static/media/traveller.png": "/static/media/traveller.343e6bec2ccb5fd6e194.png",
+    "static/media/swift.png": "/static/media/swift.417a5d42c7c129d21db1.png",
+    "static/media/innova.png": "/static/media/innova.a54e4f69fe0e484ed1a7.png",
+    "static/media/etios.png": "/static/media/etios.b356462d9c875cc06169.png",
+    "static/media/traveller1.jpg": "/static/media/traveller1.78b40ba38d2a743c35a3.jpg",
+    "static/media/innova1.jpg": "/static/media/innova1.8c74e3dec58d3ddb4119.jpg",
+    "static/media/logo2.png": "/static/media/logo2.bd5637ce88b6dc7c7cba.png",
+    "static/media/logo.png": "/static/media/logo.0d61a9dfa9328a8768d4.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.6e400e75.css",
+    "static/js/main.54892a38.js"
+  ]
+}
