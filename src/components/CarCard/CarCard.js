@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaRegUserCircle } from 'react-icons/fa'
-import { GiComputerFan, GiGears, GiGasPump } from 'react-icons/gi'
+import { GiComputerFan } from 'react-icons/gi'
 import DialogueBox from '../DialogueBox/DialogueBox'
 import './CarCard.Styles.scss'
 

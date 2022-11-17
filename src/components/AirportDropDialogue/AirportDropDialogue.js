@@ -60,7 +60,7 @@ const AirportDropDialogue = ({open, handleClose, type}) => {
             open={open}
             onClose={handleClose}
         >
-            <DialogTitle>Airport Pick up and Drop</DialogTitle>
+            <DialogTitle>{type = 'drop' ? 'Airport Pick up and Drop' : 'Airport Pick up with Duration'}</DialogTitle>
             <DialogContent>
                 <div className='tour-dialogue-content'>
                     <div className='form-container'>

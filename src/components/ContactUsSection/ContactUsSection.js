@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FiPhoneCall, FiMapPin, FiMail } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './ContactUsSection.Styles.scss';
 import logo from '../../assets/images/logo.png'
@@ -41,30 +40,30 @@ const ContactUsSection = () => {
     <section className='contact-us-section'>
       <div className='contacts' data-aos="fade-up">
           <div className='contact'>
-            <Link to='/' className='contact-icon'>
+            <a href='tel:8792451980' className='contact-icon'>
               <FiPhoneCall />
-            </Link>
+            </a>
             <div className='contact-detail'>
               <span>Call Us</span>
-              <span>+91 999999999</span>
+              <span>+91 8792451980</span>
             </div>
           </div>
           <div className='contact'>
-            <Link to='/' className='contact-icon'>
+            <a href='mailto:rt.toursandtravels.blr@gmail.com' className='contact-icon'>
               <FiMail />
-            </Link>
+            </a>
             <div className='contact-detail'>
               <span>Write To Us</span>
-              <span>touristCabs@gmail.com</span>
+              <span>rt.toursandtravels.blr@gmail.com</span>
             </div>
           </div>
           <div className='contact'>
-            <Link to='/' className='contact-icon'>
+            <a href='https://goo.gl/maps/K7PPk7BaY6g7fKcm7' target='_blanck' rel='noreferrer' className='contact-icon'>
               <FiMapPin />
-            </Link>
+            </a>
             <div className='contact-detail'>
-              <span>Opp BusStand, Majestic, </span>
-              <span>Banglore- 583121</span>
+              <span>#7, GreenLand Layout, Bellahalli </span>
+              <span>Village, Yelahanka, Banglore- 560064</span>
             </div>
           </div>
       </div>

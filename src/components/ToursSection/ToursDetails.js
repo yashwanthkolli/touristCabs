@@ -17,7 +17,7 @@ const tours = [
         place: 'Banglore',
         people: 4,
         duration: 1,
-        cost: 5000,
+        cost: 2500,
         car: 'Etios',
         img: banglore,
         visitingPlaces: ['Banglore Palace', 'Lalbagh Garden', 'Cubbon Park', 'Visvesvaraya Museum', 'Iskon Temple', 'Jawaharlal Nehru Planetorium', 'Vidhan Soudha', 'Tippu Sulthan Summer Palace']
