@@ -26,7 +26,7 @@ const TourDialogueBox = ({open, handleClose, selectedTour}) => {
         if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
         if(name && email && phone && fromDate){
           const id = toast.loading("Please wait...")
-          axios.post(`http://68.183.89.137/5000/tours/register`, { name, email, phone, from_date: fromDate, place: selectedTour })
+          axios.post(`https://rttoursandtravels.com/5000/tours/register`, { name, email, phone, from_date: fromDate, place: selectedTour })
           .then(async (res) => {
             console.log(res)
             toast.update(id, { 

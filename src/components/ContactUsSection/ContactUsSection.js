@@ -14,7 +14,7 @@ const ContactUsSection = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     const id = toast.loading("Please wait...")
-    axios.post(`${process.env.REACT_APP_API}/subscribe/register`, { email })
+    axios.post(`https://rttoursandtravels.com/5000/subscribe/register`, { email })
     .then(async (res) => {
       toast.update(id, { 
         render: "Subscribed", 
