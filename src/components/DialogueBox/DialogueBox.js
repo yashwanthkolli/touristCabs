@@ -23,11 +23,10 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
   const handleClick = (e) => {
     e.preventDefault()
     if(!validator.isAlpha(name.split(' ').join(''))) return toast.error('Enter valid Name')
-    if(!validator.isEmail(email)) return toast.error('Enter valid Email')
     if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
-    if(name && email && phone && fromDate && toDate){
+    if(name && phone && fromDate && toDate){
       const id = toast.loading("Please wait...")
-      axios.post(`${process.env.REACT_APP_API}/request/register`, { name, email, phone, car: selectedCar.name, from_date: fromDate, to_date: toDate })
+      axios.post(`http://68.183.89.137/5000/request/register`, { name, email, phone, car: selectedCar.name, from_date: fromDate, to_date: toDate })
       .then(async (res) => {
         toast.update(id, { 
           render: "Request Sent. We'll contact you soon.", 
@@ -80,7 +79,6 @@ const DialogueBox = ({open, handleClose, selectedCar}) => {
                     <TextField 
                       type='email' 
                       color='grey'
-                      required 
                       label="Email" 
                       id='email-input'
                       value={email}
