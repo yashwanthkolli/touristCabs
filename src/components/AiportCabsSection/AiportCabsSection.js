@@ -10,6 +10,7 @@ const AiportCabsSection = () => {
 
     const onClose = () => {
         setOpenDropDialogue(false)
+        setType('')
     }
 
     const onDropClick = () => {
@@ -42,7 +43,7 @@ const AiportCabsSection = () => {
                 </div>
             </div>
 
-            <AirportDropDialogue open={openDropDialogue} handleClose={onClose} type={type} />
+            <AirportDropDialogue open={openDropDialogue} handleClose={onClose} typ={type} />
         </section>
     )
 }

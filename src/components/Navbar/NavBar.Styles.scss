@@ -210,10 +210,20 @@
 @media only screen and (max-width: 470px){
     .navbar, .navbar-white{
         height: 50px;
+    }
 
+    .navbar{
         .nav-container{
             .logo-container{
                 height: 35px;
+            }
+        }
+    }
+
+    .navbar-white{
+        .nav-container{
+            .logo-container{
+                height: 30px;
             }
         }
     }
