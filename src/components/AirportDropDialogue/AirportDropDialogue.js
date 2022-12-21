@@ -24,34 +24,33 @@ const AirportDropDialogue = ({open, handleClose, typ}) => {
     const handleClick = (e) => {
         e.preventDefault()
         if(!validator.isAlpha(name.split(' ').join(''))) return toast.error('Enter valid Name')
-        if(!validator.isEmail(email)) return toast.error('Enter valid Email')
         if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
         if(name && phone && fromDate){
-          const id = toast.loading("Please wait...")
-          axios.post(`https://rttoursandtravels.com/5000/tours/register`, { name, email, phone, from_date: fromDate })
-          .then(async (res) => {
-            toast.update(id, { 
-              render: "Request Sent. We'll contact you soon.", 
-              type: "success", 
-              isLoading: false,
-              icon: true,
-              autoClose: true
-            });
-            handleClose()
-          })
-          .catch((err) => {
-            toast.update(id, { 
-                render: "Error! Please try later", 
-                type: "error", 
-                isLoading: false, 
-                icon: true, 
-                autoClose: true
-            });
-          })
+            const id = toast.loading("Please wait...")
+            axios.post(`https://rttoursandtravels.com/5000/airport/register`, { name, email, phone, from_date: fromDate, pick_place: pick, drop_place: drop })
+            .then(async (res) => {
+                toast.update(id, { 
+                    render: "Request Sent. We'll contact you soon.", 
+                    type: "success", 
+                    isLoading: false,
+                    icon: true,
+                    autoClose: true
+                });
+                handleClose()
+            })
+            .catch((err) => {
+                toast.update(id, { 
+                    render: "Error! Please try later", 
+                    type: "error", 
+                    isLoading: false, 
+                    icon: true, 
+                    autoClose: true
+                });
+            })
         } else {
-          toast.error('Enter valid details')
+            toast.error('Enter valid details')
         }
-      }
+    }
 
     return (
         <Dialog

@@ -22,7 +22,6 @@ const TourDialogueBox = ({open, handleClose, selectedTour}) => {
     const handleClick = (e) => {
         e.preventDefault()
         if(!validator.isAlpha(name.split(' ').join(''))) return toast.error('Enter valid Name')
-        if(!validator.isEmail(email)) return toast.error('Enter valid Email')
         if(!validator.isMobilePhone(phone)) return toast.error('Enter valid Phone number')
         if(name && phone && fromDate){
           const id = toast.loading("Please wait...")
